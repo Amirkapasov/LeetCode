@@ -7,4 +7,9 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-        for i in nums1:
+        nums1[m:] = nums2[:n]
+        nums1.sort()
+        return nums1
+
+test = Solution()
+print(test.merge([1,2,3,0,0,0], 3, [2,5,6], 3))
